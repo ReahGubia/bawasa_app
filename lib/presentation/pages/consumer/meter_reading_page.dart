@@ -21,7 +21,7 @@ class _MeterReadingPageState extends State<MeterReadingPage> {
   final TextEditingController _readingController = TextEditingController();
   final TextEditingController _notesController = TextEditingController();
   DateTime _selectedDate = DateTime.now();
-  String _selectedMeterType = 'Water';
+  final String _selectedMeterType = 'Water';
   File? _selectedPhoto;
   final CameraService _cameraService = CameraService();
 
@@ -215,7 +215,7 @@ class _MeterReadingPageState extends State<MeterReadingPage> {
             content: Text(
               'You can only submit a new reading after 1 month from your last reading. '
               'Next submission allowed on: ${oneMonthFromLastReading.day}/${oneMonthFromLastReading.month}/${oneMonthFromLastReading.year}'
-              '${daysRemaining > 0 ? ' (${daysRemaining} days remaining)' : ''}',
+              '${daysRemaining > 0 ? ' ($daysRemaining days remaining)' : ''}',
             ),
             backgroundColor: Colors.orange,
             duration: const Duration(seconds: 5),

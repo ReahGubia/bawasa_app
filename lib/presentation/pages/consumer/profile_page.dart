@@ -323,7 +323,7 @@ class _ProfilePageState extends State<ProfilePage> {
             label: 'Address',
             controller: _addressController,
             icon: Icons.location_on,
-            enabled: _isEditing,
+            enabled: false,
           ),
 
           if (_isEditing) ...[

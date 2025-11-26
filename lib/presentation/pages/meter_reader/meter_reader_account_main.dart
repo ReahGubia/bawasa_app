@@ -1,3 +1,5 @@
+//Meter Reader mobile app
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -82,7 +84,7 @@ class _MeterReaderAccountMainState extends State<MeterReaderAccountMain> {
     final displayHour = hour % 12 == 0 ? 12 : hour % 12;
     final minuteStr = minute.toString().padLeft(2, '0');
 
-    return '${months[date.month - 1]} ${date.day}, ${date.year} ${displayHour}:${minuteStr} ${isPM ? 'PM' : 'AM'}';
+    return '${months[date.month - 1]} ${date.day}, ${date.year} $displayHour:$minuteStr ${isPM ? 'PM' : 'AM'}';
   }
 
   @override

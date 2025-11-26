@@ -704,7 +704,7 @@ class _ConsumerAccountMainState extends State<ConsumerAccountMain> {
                             const Divider(height: 24),
                         ],
                       );
-                    }).toList(),
+                    }),
                   ],
                 ),
               );

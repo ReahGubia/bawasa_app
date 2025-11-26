@@ -92,7 +92,7 @@ class _ConsumptionChartState extends State<ConsumptionChart> {
       );
     }
 
-    return Container(
+    return SizedBox(
       height: 200,
       child: LineChart(
         LineChartData(
@@ -228,7 +228,7 @@ class _ConsumptionChartState extends State<ConsumptionChart> {
               _showComparison = value;
             });
           },
-          activeColor: const Color(0xFF4A90E2),
+          activeThumbColor: const Color(0xFF4A90E2),
         ),
         SizedBox(width: isTablet ? 12 : 8),
         Text(

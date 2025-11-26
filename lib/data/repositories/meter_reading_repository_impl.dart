@@ -123,6 +123,7 @@ class MeterReadingRepositoryImpl implements MeterReadingRepository {
   }
 
   /// Submit meter reading with photo upload
+  @override
   Future<MeterReading> submitMeterReadingWithPhoto(
     MeterReading reading,
     File? photoFile,

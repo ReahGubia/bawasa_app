@@ -125,7 +125,7 @@ class _DeepLinkHandlerState extends State<DeepLinkHandler> {
   void _handleDeepLink(Uri uri) {
     print('Deep link received: $uri');
 
-    // Check if this is a Supabase auth callback
+    // Checks if this is a Supabase auth callback
     if (uri.toString().contains('access_token') ||
         uri.toString().contains('refresh_token') ||
         uri.toString().contains('type=recovery') ||
@@ -143,7 +143,7 @@ class _DeepLinkHandlerState extends State<DeepLinkHandler> {
     // Wait a moment for Supabase to complete the auto-login
     await Future.delayed(const Duration(milliseconds: 1000));
 
-    // Check if user is currently authenticated (from auto-login)
+    // Checks if user is currently authenticated (from auto-login)
     final currentUser = SupabaseConfig.client.auth.currentUser;
     if (currentUser != null) {
       print('User is auto-logged in after email verification');
